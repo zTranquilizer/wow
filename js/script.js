@@ -9542,13 +9542,18 @@ document.addEventListener("DOMContentLoaded", function () {
 				slidesPerView: 2,
 				spaceBetween: 15,
 			},
+			630: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
 			480: {
 				slidesPerView: 1,
-				spaceBetween: 15,
+				spaceBetween: 0,
 			},
 			320: {
 				slidesPerView: 'auto',
 				spaceBetween: 0,
+				centeredSlides: true,
 
 			},
 		},

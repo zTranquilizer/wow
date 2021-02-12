@@ -9532,6 +9532,13 @@ document.addEventListener("DOMContentLoaded", function () {
 			prevEl: '.swiper-button-prev',
 		},
 		loop: true,
+		preloadImages: false,
+		lazy: {
+			loadOnTransitionStart: true,
+			loadPrevNext: true,
+		},
+		watchSlidesProgress: true,
+		watchSlidesVisibility: true,
 		breakpoints: {
 			992: {
 				slidesPerView: 3,
@@ -9549,6 +9556,8 @@ document.addEventListener("DOMContentLoaded", function () {
 			480: {
 				slidesPerView: 1,
 				spaceBetween: 0,
+				watchSlidesProgress: false,
+				watchSlidesVisibility: false,
 			},
 			320: {
 				slidesPerView: 'auto',

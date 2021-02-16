@@ -1790,3 +1790,11 @@ body.lock {
     font-size: 28px;
   }
 }
+
+.webp .first-screen { background: url(../img/banner-bg.webp) center/cover no-repeat; }
+
+.webp .delivery__content { background: url(../img/delivery-img.webp) right/contain no-repeat, #fff; }
+
+.webp .delivery__leaf_1 { background: url(../img/leaf-3.webp) center no-repeat; }
+
+.webp .delivery__leaf_2 { background: url(../img/leaf-4.webp) center no-repeat; }

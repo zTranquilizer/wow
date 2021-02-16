@@ -818,6 +818,7 @@ body.lock {
   width: 14px;
   height: 27px;
   z-index: 3;
+  cursor: pointer;
 }
 
 .swiper-button-next {

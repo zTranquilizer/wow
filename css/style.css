@@ -1670,6 +1670,10 @@ body.lock {
     margin: 0px 0px 20px 0px;
   }
 
+  .inst__leafs {
+    display: none;
+  }
+
   .delivery {
     padding: 50px 0px 50px 0px;
   }

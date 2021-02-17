@@ -9597,5 +9597,17 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		});
 	});
+	document.addEventListener('scroll', function () {
+		let scroll_from_top = window.scrollY;
+		if (scroll_from_top > 130) {
+			document.querySelector('.header').classList.add('fixed');
+			document.querySelector('.page').classList.add('fixed-header');
+			document.querySelector('.header__top').style.display = 'none';
+		} else {
+			document.querySelector('.header').classList.remove('fixed');
+			document.querySelector('.page').classList.remove('fixed-header');
+			document.querySelector('.header__top').style.display = 'flex';
+		}
+	});
 
 });

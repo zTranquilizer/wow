@@ -367,6 +367,23 @@ body.lock {
 
 .header {
   padding: 35px 0px 0px 0px;
+  -webkit-transition: all 0.1s ease 0s;
+  -o-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+}
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  background: #d4d4d4;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  z-index: 10;
+  padding: 0px 0px 0px 0px;
 }
 
 .header__top {
@@ -456,16 +473,16 @@ body.lock {
 }
 
 .header-menu__list li {
-  margin: 0px 40px 0px 0px;
+  margin: 0px 40px 10px 0px;
 }
 
 .header-menu__list li:last-child {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 .header-menu__link {
   font-family: Nunito;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 14px;
   text-transform: uppercase;
   color: #0f473d;
@@ -641,6 +658,10 @@ body.lock {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
+}
+
+.page.fixed-header {
+  padding: 101px 0px 0px 0px;
 }
 
 .first-screen {
@@ -965,11 +986,17 @@ body.lock {
   border-radius: 16px;
   width: 40px;
   text-align: center;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .product__toggle-item.active {
   background: #acacac;
   color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .product__bottom {

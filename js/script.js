@@ -1,19 +1,20 @@
-function testWebP(callback) {
-	var webP = new Image();
-	webP.onload = webP.onerror = function () {
-		callback(webP.height == 2);
-	};
-	webP.src =
-		"data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
-}
+// function testWebP(callback) {
+// 	var webP = new Image();
+// 	webP.onload = webP.onerror = function () {
+// 		callback(webP.height == 2);
+// 	};
+// 	webP.src =
+// 		"data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
+// }
 
-testWebP(function (support) {
-	if (support == true) {
-		document.querySelector("body").classList.add("webp");
-	} else {
-		document.querySelector("body").classList.add("no-webp");
-	}
-});
+// testWebP(function (support) {
+// 	if (support == true) {
+// 		document.querySelector("body").classList.add("webp");
+// 	} else {
+// 		document.querySelector("body").classList.add("no-webp");
+// 	}
+
+// });
 
 /**
  * Swiper 6.4.10
@@ -9584,4 +9585,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 
 	});
+
+	document.querySelectorAll('.product__toggle').forEach(item => {
+		item.querySelectorAll('.product__toggle-item').forEach(child => {
+			child.addEventListener('click', function (e) {
+				e.preventDefault();
+				item.querySelectorAll('.product__toggle-item').forEach(chil => {
+					chil.classList.remove('active');
+				});
+				this.classList.add('active');
+			});
+		});
+	});
+
 });

@@ -16,6 +16,7 @@
 
 // });
 
+
 /**
  * Swiper 6.4.10
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -9609,5 +9610,58 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.querySelector('.header__top').style.display = 'flex';
 		}
 	});
-
+	navOpen();
+	sortOpen();
+	goodsTabs();
 });
+
+function navOpen() {
+	document.querySelector('.header-menu__icon').addEventListener('click', function (e) {
+		this.classList.toggle('active');
+		document.querySelector('.header-menu').classList.toggle('active');
+		document.querySelector('body').classList.toggle('lock');
+	});
+}
+
+function sortOpen() {
+	document.querySelectorAll('.pizza__sorting-link').forEach(item => {
+		item.addEventListener('click', function (e) {
+			e.preventDefault();
+			if (item.classList.contains('active')) {
+				document.querySelector('.pizza__sorting-list').classList.toggle('active');
+				item.classList.toggle('rotate-pseudo');
+			}
+			if (!item.classList.contains('active')) {
+				let result = Array.from(document.querySelectorAll('.pizza__sorting-link'));
+				result = result.filter(item2 => {
+					return item2.classList.contains('active');
+				});
+				let item_text = item.textContent;
+				let result_text = result[0].textContent;
+				result[0].innerHTML = item_text;
+				this.innerHTML = result_text;
+				document.querySelector('.pizza__sorting-list').classList.remove('active');
+				result[0].classList.remove('rotate-pseudo');
+			}
+		});
+	});
+}
+
+function goodsTabs() {
+	document.querySelectorAll('.goods-tabs__item').forEach(item => {
+		item.addEventListener('click', function () {
+			let att = item.getAttribute('data-goods');
+			document.querySelectorAll('.goods-tabs__item').forEach(item2 => {
+				item2.classList.remove('active');
+			});
+			document.querySelectorAll('.goods__item').forEach(child => {
+				child.classList.remove('active');
+				if (child.getAttribute('data-goods') == att) {
+					item.classList.add('active');
+					child.classList.add('active');
+				}
+			});
+
+		});
+	});
+}

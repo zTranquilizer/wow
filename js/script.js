@@ -9613,6 +9613,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	navOpen();
 	sortOpen();
 	goodsTabs();
+	productsTabs();
 });
 
 function navOpen() {
@@ -9663,5 +9664,30 @@ function goodsTabs() {
 			});
 
 		});
+	});
+}
+
+function productsTabs() {
+	document.querySelectorAll('.pizza__category').forEach(item => {
+		item.addEventListener('click', function (e) {
+			e.preventDefault();
+			let att = item.getAttribute('data-category');
+			document.querySelectorAll('.pizza__category').forEach(item2 => {
+				item2.classList.remove('active');
+			});
+			let pizza_products = document.querySelector('.pizza__products');
+			pizza_products.querySelectorAll('.product').forEach(child => {
+				child.classList.remove('active');
+				if (child.getAttribute('data-category') == att) {
+					child.classList.add('active');
+					item.classList.add('active');
+				}
+				if (att == 'all') {
+					child.classList.add('active');
+					item.classList.add('active');
+				}
+			});
+		});
+		item.click();
 	});
 }

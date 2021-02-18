@@ -1500,6 +1500,22 @@ body.lock {
   margin: 0;
 }
 
+.pizza__ready {
+  display: none;
+}
+
+.pizza__ready.active {
+  display: block;
+}
+
+.pizza__constructor {
+  display: none;
+}
+
+.pizza__constructor.active {
+  display: block;
+}
+
 .pizza__choices {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1670,6 +1686,138 @@ body.lock {
   font-size: 25px;
   text-align: center;
   font-weight: 700;
+}
+
+.constructor__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0px 0px 137px 0px;
+}
+
+.constructor__points {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 31%;
+  flex: 0 0 31%;
+  padding: 17px 0;
+  border-right: 1px solid #858585;
+}
+
+.constructor__points-list li {
+  margin: 0px 0px 46px 0px;
+}
+
+.constructor__points-list li:last-child {
+  margin: 0;
+}
+
+.constructor__points-link {
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.constructor__points-link span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #fba215;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fba215;
+  margin: 0px 16px 0px 0px;
+}
+
+.constructor__points-link span.active {
+  color: #ffffff;
+  background: #fba215;
+}
+
+.constructor__create-process {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.constructor__pizzas-sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.constructor__pizzas-size {
+  border: 2px solid #acacac;
+  font-size: 18px;
+  line-height: 22px;
+  color: #acacac;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.constructor__pizzas-size_1 {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  margin: 0px 61px 0px 0px;
+}
+
+.constructor__pizzas-size_2 {
+  width: 223px;
+  height: 223px;
+  border-radius: 50%;
+}
+
+.constructor__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.constructor__cost {
+  margin: 0px 40px 0px 0px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0f473d;
+}
+
+.product-cost {
+  margin: 0px 0px 0px 10px;
 }
 
 @media (min-width: 991.98px) {

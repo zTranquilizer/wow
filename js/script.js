@@ -9614,6 +9614,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	sortOpen();
 	goodsTabs();
 	productsTabs();
+	madeItemsTab();
 });
 
 function navOpen() {
@@ -9690,4 +9691,28 @@ function productsTabs() {
 		});
 		item.click();
 	});
+}
+
+function madeItemsTab() {
+	document.querySelectorAll('.pizza__made-item').forEach(item => {
+		item.addEventListener('click', function (e) {
+			e.preventDefault();
+			let att = item.getAttribute('data-ready-pizza');
+			document.querySelectorAll('.pizza__made-item').forEach(item2 => {
+				item2.classList.remove('active');
+			});
+			if (document.querySelector('.pizza__ready').getAttribute('data-ready-pizza') == att) {
+				document.querySelector('.pizza__ready').classList.add('active');
+				item.classList.add('active');
+				document.querySelector('.pizza__constructor').classList.remove('active');
+			}
+			if (document.querySelector('.pizza__constructor').getAttribute('data-ready-pizza') == att) {
+				document.querySelector('.pizza__constructor').classList.add('active');
+				item.classList.add('active');
+				document.querySelector('.pizza__ready').classList.remove('active');
+				document.querySelector('.pizza__made-items').style.margin = '0 0 35px 0';
+			}
+		});
+	});
+	document.querySelector('.pizza__made-item').click();
 }

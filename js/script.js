@@ -9615,6 +9615,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	goodsTabs();
 	productsTabs();
 	madeItemsTab();
+	constructorProcess();
 });
 
 function navOpen() {
@@ -9651,7 +9652,8 @@ function sortOpen() {
 
 function goodsTabs() {
 	document.querySelectorAll('.goods-tabs__item').forEach(item => {
-		item.addEventListener('click', function () {
+		item.addEventListener('click', function (e) {
+			e.preventDefault();
 			let att = item.getAttribute('data-goods');
 			document.querySelectorAll('.goods-tabs__item').forEach(item2 => {
 				item2.classList.remove('active');
@@ -9714,5 +9716,67 @@ function madeItemsTab() {
 			}
 		});
 	});
-	document.querySelector('.pizza__made-item').click();
+	if (document.querySelector('.pizza__made-item')) {
+		document.querySelector('.pizza__made-item').click();
+	}
+}
+
+function constructorProcess() {
+	document.querySelectorAll('.constructor__points-link').forEach(item => {
+		item.addEventListener('click', function (e) {
+			e.preventDefault();
+			let att = item.getAttribute('data-point');
+			document.querySelectorAll('.constructor__points-link').forEach(item2 => {
+				item2.classList.remove('active');
+			});
+			document.querySelectorAll('.create-process__item').forEach(child => {
+				child.classList.remove('active');
+				if (child.getAttribute('data-point') == att) {
+					child.classList.add('active');
+					item.classList.add('active');
+				}
+			});
+
+		});
+	});
+	if (document.querySelector('.constructor__points-link')) {
+		document.querySelector('.constructor__points-link').click();
+	}
+	document.querySelectorAll('.create-process__pizzas-size').forEach(item => {
+		item.addEventListener('click', function () {
+			document.querySelectorAll('.create-process__pizzas-size').forEach(item2 => {
+				item2.classList.remove('active');
+			});
+			this.classList.add('active');
+		});
+		if (document.querySelector('.create-process__pizzas-size')) {
+			document.querySelector('.create-process__pizzas-size').click();
+		}
+	});
+	document.querySelectorAll('.create-process__addition').forEach(item => {
+		item.addEventListener('click', function (e) {
+			e.preventDefault();
+			item.classList.toggle('active');
+		});
+	});
+	document.querySelectorAll('.create-process__topping-name').forEach(item => {
+		item.addEventListener('click', function (e) {
+			let att = item.getAttribute('data-topping');
+			document.querySelectorAll('.create-process__topping-name').forEach(item2 => {
+				item2.classList.remove('active');
+			});
+			document.querySelectorAll('.create-process__topping-list').forEach(child => {
+				child.classList.remove('active');
+				item.classList.add('active');
+				if (child.getAttribute('data-topping') == att && item.classList.contains('active')) {
+					child.classList.add('active');
+				} else {
+					child.classList.remove('active');
+				}
+			});
+
+
+		})
+	})
+
 }

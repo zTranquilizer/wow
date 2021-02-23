@@ -695,7 +695,7 @@ body.lock {
 .first-screen {
   margin: 25px 0px 0px 0px;
   position: relative;
-  z-index: 5;
+  z-index: 2;
   background: url("../img/banner-bg.png") center/cover no-repeat;
 }
 
@@ -1582,6 +1582,8 @@ body.lock {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 20%;
   flex: 0 0 20%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .pizza__sorting-text {
@@ -1927,6 +1929,28 @@ body.lock {
 
 .create-process__topping:last-child {
   margin: 0px 0px 0px 0px;
+}
+
+.create-process__topping.active .create-process__topping-list {
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  -webkit-transform: translate(0, 0%);
+  -ms-transform: translate(0, 0%);
+  transform: translate(0, 0%);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+  margin: 16px 0px 16px 40px;
+}
+
+.create-process__topping.active .create-process__topping-name:before {
+  -webkit-transform: translate(0, -50%) rotate(180deg);
+  -ms-transform: translate(0, -50%) rotate(180deg);
+  transform: translate(0, -50%) rotate(180deg);
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .create-process__topping-name {
@@ -2636,6 +2660,10 @@ body.lock {
 
   .create-process__toppings {
     margin: 0px 0px 0px 0px;
+  }
+
+  .create-process__topping.active .create-process__topping-list {
+    margin: 16px 0px 16px 20px;
   }
 
   .create-process__topping-list {

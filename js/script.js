@@ -9762,21 +9762,16 @@ function constructorProcess() {
 	document.querySelectorAll('.create-process__topping-name').forEach(item => {
 		item.addEventListener('click', function (e) {
 			let att = item.getAttribute('data-topping');
-			document.querySelectorAll('.create-process__topping-name').forEach(item2 => {
-				item2.classList.remove('active');
-			});
-			document.querySelectorAll('.create-process__topping-list').forEach(child => {
-				child.classList.remove('active');
-				item.classList.add('active');
-				if (child.getAttribute('data-topping') == att && item.classList.contains('active')) {
-					child.classList.add('active');
-				} else {
+			const parent = item.parentNode;
+			if (parent.classList.contains('active')) {
+				parent.classList.remove('active');
+			} else {
+				document.querySelectorAll('.create-process__topping').forEach(child => {
 					child.classList.remove('active');
-				}
-			});
-
+				});
+				parent.classList.add('active');
+			}
 
 		})
-	})
-
+	});
 }

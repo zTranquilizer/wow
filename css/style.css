@@ -90,7 +90,7 @@ h6 {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
+  src: local("Montserrat"), url("../fonts/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -98,7 +98,7 @@ h6 {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
+  src: local("Montserrat"), url("../fonts/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat-ExtraBold.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
 }
@@ -106,7 +106,7 @@ h6 {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
+  src: local("Montserrat"), url("../fonts/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -114,7 +114,7 @@ h6 {
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
+  src: local("Montserrat"), url("../fonts/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
@@ -122,7 +122,7 @@ h6 {
 @font-face {
   font-family: "Nunito";
   font-display: swap;
-  src: url("../fonts/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito-Bold.woff2") format("woff2");
+  src: local("Nunito"), url("../fonts/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -130,7 +130,7 @@ h6 {
 @font-face {
   font-family: "Nunito";
   font-display: swap;
-  src: url("../fonts/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito-Regular.woff2") format("woff2");
+  src: local("Nunito"), url("../fonts/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }

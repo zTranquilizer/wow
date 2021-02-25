@@ -52,6 +52,7 @@ input::-ms-clear {
 
 button {
   cursor: pointer;
+  background-color: inherit;
 }
 
 button::-moz-focus-inner {
@@ -2032,6 +2033,140 @@ body.lock {
   margin: 0;
 }
 
+.contacts {
+  padding: 56px 0;
+}
+
+.contacts__body {
+  position: relative;
+  z-index: 2;
+}
+
+.contacts__title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0f473d;
+  margin: 0px 0px 47px 0px;
+}
+
+.contacts__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.contacts__map {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+}
+
+.contacts__leaf {
+  position: absolute;
+}
+
+.contacts__leaf_1 {
+  width: 194px;
+  height: 157px;
+  background: url("../img/leaf-3.png") center/contain no-repeat;
+  top: -2%;
+  right: 0;
+  z-index: 1;
+  -webkit-transform: rotate(86deg);
+  -ms-transform: rotate(86deg);
+  transform: rotate(86deg);
+}
+
+.contacts__leaf_2 {
+  width: 178px;
+  height: 150px;
+  background: url("../img/leaf-4.png") center/contain no-repeat;
+  top: 0;
+  right: -6%;
+  z-index: 0;
+  -webkit-transform: rotate(168deg);
+  -ms-transform: rotate(168deg);
+  transform: rotate(168deg);
+}
+
+.info-contacts {
+  padding: 60px 55px;
+  background-color: #fff;
+}
+
+.info-contacts__item {
+  margin: 0px 0px 32px 0px;
+  padding: 0px 0px 0px 30px;
+  position: relative;
+}
+
+.info-contacts__item:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.info-contacts__item:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  background: url("../img/city-marker.svg") center/contain no-repeat;
+}
+
+.info-contacts__city {
+  font-family: Nunito;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #0f473d;
+}
+
+.info-contacts__addres {
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #0f473d;
+  margin: 0px 0px 14px 0px;
+}
+
+.info-contacts__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.info-contacts__column {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+}
+
+.info-contacts__tel {
+  display: inline-block;
+  font-family: Nunito;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.info-contacts__work-time {
+  font-family: Nunito;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #000000;
+}
+
 @media (min-width: 991.98px) {
   .header-menu__link.active:hover {
     -webkit-transition: all 0.3s ease 0s;
@@ -2232,6 +2367,68 @@ body.lock {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
+  }
+
+  .contacts__content {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .contacts__map {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+
+  .info-contacts {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    padding: 30px 55px;
+  }
+
+  .info-contacts__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .info-contacts__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.333%;
+    flex: 0 0 33.333%;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .info-contacts__columns {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .info-contacts__column {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .info-contacts__tel {
+    margin: 0px 0px 5px 0px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+
+  .info-contacts__work-time {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
   }
 }
 
@@ -2674,6 +2871,17 @@ body.lock {
   .create-process__topping-list.active {
     margin: 16px 0px 16px 20px;
   }
+
+  .contacts__leaf {
+    display: none;
+  }
+
+  .info-contacts__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    margin: 0px 0px 20px 0px;
+  }
 }
 
 @media (max-width: 630px) {
@@ -2759,5 +2967,11 @@ body.lock {
 
   .create-process__pizzas-size_2 {
     margin: 0px 10px 0px 10px;
+  }
+
+  .info-contacts__item {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
   }
 }

@@ -9592,13 +9592,29 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.querySelector('.header__top').style.display = 'flex';
 		}
 	});
+	getWindowHref();
 	navOpen();
 	sortOpen();
 	goodsTabs();
 	productsTabs();
 	madeItemsTab();
 	constructorProcess();
+
+
 });
+
+function getWindowHref() {
+	document.querySelectorAll('.header-menu__link ').forEach(item2 => {
+		item2.classList.remove('active');
+	});
+	document.querySelectorAll('.header-menu__link ').forEach(item => {
+		let attHref = item.getAttribute('href').replace('#');
+		let windowHref = window.location.href;
+		if (windowHref.includes(attHref)) {
+			item.classList.add('active');
+		}
+	});
+}
 
 function navOpen() {
 	document.querySelector('.header-menu__icon').addEventListener('click', function (e) {
@@ -9757,3 +9773,4 @@ function constructorProcess() {
 		})
 	});
 }
+

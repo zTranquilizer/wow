@@ -501,11 +501,12 @@ body.lock {
   display: flex;
 }
 
-.header-menu__list li {
+.header-menu__list-item {
+  position: relative;
   margin: 0px 40px 10px 0px;
 }
 
-.header-menu__list li:last-child {
+.header-menu__list-item:last-child {
   margin: 0px 0px 10px 0px;
 }
 
@@ -525,6 +526,39 @@ body.lock {
 .header-menu__link.arrow {
   padding: 0px 15px 0px 0px;
   background: url("../img/arrow-down.svg") right/7px 3px no-repeat;
+}
+
+.submenu-header {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  padding: 10px 0px 4px 0px;
+  background-color: #e5e5e5;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  width: 125px;
+}
+
+.submenu-header__item {
+  margin: 0px 0px 4px 0px;
+  padding: 0px 7px 0px 7px;
+}
+
+.submenu-header__item:last-child {
+  margin: 0px 0px 0px 0px;
+}
+
+.submenu-header__link {
+  display: inline-block;
+  font-family: Nunito;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #0f473d;
+  width: 100%;
 }
 
 .tel {
@@ -2172,6 +2206,20 @@ body.lock {
 }
 
 @media (min-width: 991.98px) {
+  .header-menu__list-item:hover .submenu-header {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header-menu__list-item:hover .header-menu__link:after {
+    width: 100%;
+    left: 0;
+    background-color: #0f473d;
+  }
+
   .header-menu__link.active:hover {
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -2206,6 +2254,10 @@ body.lock {
     width: 100%;
     left: 0;
     background-color: #0f473d;
+  }
+
+  .submenu-header__item:hover {
+    background-color: rgba(232, 156, 24, 0.56);
   }
 
   .link {
@@ -2262,6 +2314,11 @@ body.lock {
 @media (max-width: 991.98px) {
   .container {
     max-width: 750px;
+  }
+
+  .header-menu__link.arrow {
+    padding: 0;
+    background: none;
   }
 
   .footer__links {
@@ -2563,18 +2620,13 @@ body.lock {
     display: block;
   }
 
-  .header-menu__list li {
+  .header-menu__list-item {
     margin: 0px 0px 30px 0px;
     text-align: center;
   }
 
-  .header-menu__list li:last-child {
+  .header-menu__list-item:last-child {
     margin: 0px 0px 0px 0px;
-  }
-
-  .header-menu__link.arrow {
-    padding: 0;
-    background: none;
   }
 
   .header-menu__link {

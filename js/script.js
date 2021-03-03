@@ -9604,7 +9604,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function getWindowHref() {
-	document.querySelectorAll('.header-menu__link ').forEach(item2 => {
+	document.querySelectorAll('.header-menu__link').forEach(item2 => {
 		item2.classList.remove('active');
 	});
 	document.querySelectorAll('.header-menu__link ').forEach(item => {

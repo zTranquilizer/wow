@@ -2747,7 +2747,7 @@ body.lock {
   }
 
   .delivery__body {
-    min-width: none;
+    max-width: none;
     padding: 0px 10px;
   }
 

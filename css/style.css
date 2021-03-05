@@ -268,7 +268,7 @@ body.lock {
 
 .header-menu__link {
   font-family: Nunito;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
   color: #0f473d;
@@ -1005,7 +1005,6 @@ body.lock {
   font-size: 15px;
   color: #0f473d;
   margin: 0px 0px 10px 0px;
-  white-space: nowrap;
 }
 
 .product__description {
@@ -1253,10 +1252,6 @@ body.lock {
 }
 
 .delivery__title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  color: #0f473d;
   margin: 0px 0px 74px 0px;
 }
 
@@ -1386,6 +1381,13 @@ body.lock {
   -webkit-transform: rotate(-10deg) scale(1.01);
   -ms-transform: rotate(-10deg) scale(1.01);
   transform: rotate(-10deg) scale(1.01);
+}
+
+.secondary-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0f473d;
 }
 
 .goods-tabs {
@@ -2035,10 +2037,6 @@ body.lock {
 }
 
 .contacts__title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  color: #0f473d;
   margin: 0px 0px 47px 0px;
 }
 

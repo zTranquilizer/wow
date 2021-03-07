@@ -9705,6 +9705,7 @@ function madeItemsTab() {
 				document.querySelector('.pizza__ready').classList.add('active');
 				item.classList.add('active');
 				document.querySelector('.pizza__constructor').classList.remove('active');
+
 			}
 			if (document.querySelector('.pizza__constructor').getAttribute('data-ready-pizza') == att) {
 				document.querySelector('.pizza__constructor').classList.add('active');
@@ -9720,6 +9721,10 @@ function madeItemsTab() {
 }
 
 function constructorProcess() {
+	let costArr = [];
+	let sizeSum = 0;
+	let costWrapper = document.querySelector('.product-cost');
+
 	document.querySelectorAll('.constructor__points-link').forEach(item => {
 		item.addEventListener('click', function (e) {
 			e.preventDefault();
@@ -9745,16 +9750,32 @@ function constructorProcess() {
 			document.querySelectorAll('.create-process__pizzas-size').forEach(item2 => {
 				item2.classList.remove('active');
 			});
-			this.classList.add('active');
+			item.classList.add('active');
+			sizeSum = +item.getAttribute('data-cost');
+			costWrapper.textContent = sizeSum;
+			if (costArr != false) {
+				let sum = costArr.reduce((prev, current) => +prev + +current);
+				costWrapper.textContent = sum + sizeSum;
+			}
+
 		});
 		if (document.querySelector('.create-process__pizzas-size')) {
 			document.querySelector('.create-process__pizzas-size').click();
 		}
 	});
+
 	document.querySelectorAll('.create-process__addition').forEach(item => {
 		item.addEventListener('click', function (e) {
 			e.preventDefault();
 			item.classList.toggle('active');
+			let attCost = item.getAttribute('data-cost');
+			if (item.classList.contains('active')) {
+				costArr.push(+attCost);
+			} else {
+				costArr.pop();
+			}
+			let sum = costArr.reduce((prev, current) => +prev + +current);
+			costWrapper.textContent = sum + sizeSum;
 		});
 	});
 	document.querySelectorAll('.create-process__topping-name').forEach(item => {
@@ -9772,6 +9793,7 @@ function constructorProcess() {
 
 		})
 	});
-}
 
+
+}
 

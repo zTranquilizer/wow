@@ -1631,12 +1631,6 @@ body.lock {
   z-index: 2;
 }
 
-.pizza__sorting-list.active .pizza__sorting-link:after {
-  -webkit-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  transform: rotate(-180deg);
-}
-
 .pizza__sorting-list li {
   border-bottom: 1px solid #000;
 }
@@ -1645,7 +1639,7 @@ body.lock {
   border-bottom: none;
 }
 
-.pizza__sorting-link {
+.pizza__sorting-value-btn {
   font-family: Nunito;
   font-size: 12px;
   line-height: 16px;
@@ -1654,7 +1648,7 @@ body.lock {
   padding: 0px 12px 0px 0px;
 }
 
-.pizza__sorting-link.active:after {
+.pizza__sorting-value-btn:after {
   content: "";
   position: absolute;
   width: 7px;
@@ -1670,10 +1664,35 @@ body.lock {
   transition: all 0.3s ease 0s;
 }
 
-.pizza__sorting-link.rotate-pseudo:after {
+.pizza__sorting-value-btn.active:after {
   -webkit-transform: translate(0, -50%) rotate(180deg);
   -ms-transform: translate(0, -50%) rotate(180deg);
   transform: translate(0, -50%) rotate(180deg);
+}
+
+.pizza__sorting-link {
+  display: inline-block;
+  font-family: Nunito;
+  font-size: 12px;
+  line-height: 16px;
+  color: #3f2d20;
+  position: relative;
+  padding: 0px 12px 0px 0px;
+  text-align: left;
+  width: 100%;
+}
+
+.pizza__sorting-link.active:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%) rotate(0deg);
+  -ms-transform: translate(0, -50%) rotate(0deg);
+  transform: translate(0, -50%) rotate(0deg);
+  right: 0;
+  background: url("../img/check-mark.svg") center/10px 10px no-repeat;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -2988,6 +3007,14 @@ body.lock {
 
   .pizza__sorting-list {
     border: 1px solid #000;
+  }
+
+  .pizza__sorting-list li {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .pizza__sorting-list li:last-child {
+    margin: 0;
   }
 
   .constructor__cost {
